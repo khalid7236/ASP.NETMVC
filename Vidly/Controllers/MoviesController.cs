@@ -31,5 +31,32 @@ namespace Vidly.Controllers
         {
             return Content(year + "/" + month);
         }
+
+        public ActionResult Customers()
+        {
+            var Customers = new List<Customer> {
+                                new Customer {Name = "khalid"},
+                                new Customer {Name = "Rama"}
+                            };
+
+            var ViewModel = new RandomMovieViewModels
+            {
+                Customers = Customers
+            };
+            return View(ViewModel);
+        }
+
+        public ActionResult Movie()
+        {
+            var movies = new List<Movie> { new Movie { Name = "sherk!" } ,
+                new Movie { Name = "sherk2!" }
+            };
+
+            var ViewModel = new RandomMovieViewModels
+            {
+                Movies = movies
+            };
+            return View(ViewModel);
+        }
     }
 }
