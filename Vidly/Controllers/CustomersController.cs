@@ -11,6 +11,7 @@ namespace Vidly.Controllers
         // GET: Customers
         public ActionResult Index()
         {
+            //dfdfgg
             return View();
         }
     }
